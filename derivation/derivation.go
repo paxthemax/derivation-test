@@ -22,7 +22,3 @@ func KeyDerivation(pub *Key, priv *Key) Key {
 	point2.ToBytes(&tmp)
 	return tmp
 }
-
-func Bla() string {
-	return "BLA!"
-}
