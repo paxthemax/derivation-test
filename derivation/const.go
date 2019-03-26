@@ -25,7 +25,7 @@ var Identity = Key{0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0
 
 // basepoint of curve basically G
 //var GBASE = ScalarmultBase(*(d2h(1)))
-var GBASE = hexToKey("5866666666666666666666666666666666666666666666666666666666666666")
+var GBASE = HexToKey("5866666666666666666666666666666666666666666666666666666666666666")
 
 var GBASE_Cached [8]CachedGroupElement // filled in below
 func init() { // calculate G cached for faster computations later on
