@@ -1,5 +1,7 @@
 package main
 
-func main() {
+import "derivation/derivation"
 
+func main() {
+	derivation.Bla()
 }

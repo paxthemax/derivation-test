@@ -1,12 +1,12 @@
 package derivation
 
 // KeyDerivation derives a new private key
-func KeyDerivation(pub *Key, priv *Key) (KeyDerivation Key) {
+func KeyDerivation(pub *Key, priv *Key) Key {
 	var point ExtendedGroupElement
 	var point2 ProjectiveGroupElement
 	var point3 CompletedGroupElement
 
-	if !priv.Private_Key_Valid() {
+	if !Sc_check(priv) {
 		panic("Invalid private key.")
 	}
 	tmp := *pub
@@ -21,4 +21,8 @@ func KeyDerivation(pub *Key, priv *Key) (KeyDerivation Key) {
 
 	point2.ToBytes(&tmp)
 	return tmp
+}
+
+func Bla() string {
+	return "BLA!"
 }
